@@ -34,6 +34,12 @@
     <ClCompile Include="WorkSpaceBar2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="catalog\QPrntSymDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="catalog\QPrntSymView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChildFrm.h">
@@ -70,6 +76,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ToolBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="catalog\QPrntSymDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="catalog\QPrntSymView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

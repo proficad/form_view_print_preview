@@ -1,4 +1,4 @@
-//Microsoft Visual C++ generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -7,31 +7,36 @@
 //
 // Generated from the TEXTINCLUDE 2 resource.
 //
-
 #include "afxres.h"
 
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
 
-#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+// Czech (Czech Republic) resources
 
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+
+#ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE
+2 TEXTINCLUDE 
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE
+3 TEXTINCLUDE 
 BEGIN
     "#define _AFX_NO_OLE_RESOURCES\r\n"
     "#define _AFX_NO_TRACKER_RESOURCES\r\n"
@@ -49,6 +54,16 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
+#endif    // Czech (Czech Republic) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -57,29 +72,31 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "RES\\form_view_print_preview.ico"
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-LANGUAGE 9, 1
-#pragma code_page(1252)
-IDR_MAINFRAME           ICON         "RES\\form_view_print_preview.ico"
-IDR_formviewprintpreviewTYPE         ICON         "RES\\form_view_print_previewDoc.ico"
-#endif
+IDR_formviewprintpreviewTYPE ICON                    "RES\\form_view_print_previewDoc.ico"
+
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Bitmap
 //
 
-IDR_MAINFRAME           BITMAP      "res\\Toolbar.bmp"
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // PNG
 //
 
-IDB_TOOLBAR_HC                  PNG          "res\\Toolbar.png"
-IDB_WORKSPACE                   PNG          "res\\Workspace.png"
-IDB_TOOLS_PAGE1                 PNG          "res\\tools_page1.png"
-IDB_TOOLS_PAGE2                 PNG          "res\\tools_page2.png"
+IDB_TOOLBAR_HC          PNG                     "res\\Toolbar.png"
+
+IDB_WORKSPACE           PNG                     "res\\Workspace.png"
+
+IDB_TOOLS_PAGE1         PNG                     "res\\tools_page1.png"
+
+IDB_TOOLS_PAGE2         PNG                     "res\\tools_page2.png"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -87,26 +104,21 @@ IDB_TOOLS_PAGE2                 PNG          "res\\tools_page2.png"
 // Toolbar
 //
 
-
-IDR_MAINFRAME TOOLBAR   16, 16
+IDR_MAINFRAME TOOLBAR 16, 16
 BEGIN
-BUTTON      ID_FILE_NEW
-BUTTON      ID_FILE_OPEN
-BUTTON      ID_FILE_SAVE
-SEPARATOR
-BUTTON      ID_EDIT_CUT
-BUTTON      ID_EDIT_COPY
-BUTTON      ID_EDIT_PASTE
-SEPARATOR
-BUTTON      ID_FILE_PRINT
-BUTTON      ID_APP_ABOUT
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
 END
 
 
-
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-LANGUAGE 9, 1
-#pragma code_page(1252)
 /////////////////////////////////////////////////////////////////////////////
 //
 // Menu
@@ -114,14 +126,14 @@ LANGUAGE 9, 1
 
 IDR_MAINFRAME MENU
 BEGIN
-POPUP "&File"
+    POPUP "&File"
     BEGIN
         MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
         MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
         MENUITEM SEPARATOR
         MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
         MENUITEM SEPARATOR
-        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1,GRAYED
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "&Close",                      ID_FILE_CLOSE
         MENUITEM "E&xit",                       ID_APP_EXIT
@@ -135,19 +147,21 @@ POPUP "&File"
         MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
         POPUP "&Application Look"
         BEGIN
-            MENUITEM "",            ID_VIEW_APPLOOK
+            MENUITEM "",                            ID_VIEW_APPLOOK
         END
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&About form_view_print_preview...",          ID_APP_ABOUT
+        MENUITEM "&About form_view_print_preview...", ID_APP_ABOUT
     END
 END
+
 IDR_formviewprintpreviewTYPE MENU
 BEGIN
     POPUP "&File"
     BEGIN
         MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "New Catalog",                 ID_FILE_NEWCATALOG
         MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
         MENUITEM "&Close",                      ID_FILE_CLOSE
         MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
@@ -157,7 +171,7 @@ BEGIN
         MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
         MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
         MENUITEM SEPARATOR
-        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1,GRAYED
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "E&xit",                       ID_APP_EXIT
     END
@@ -178,7 +192,7 @@ BEGIN
         MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
         POPUP "&Application Look"
         BEGIN
-            MENUITEM "",            ID_VIEW_APPLOOK
+            MENUITEM "",                            ID_VIEW_APPLOOK
         END
     END
     POPUP "&Window"
@@ -187,12 +201,9 @@ BEGIN
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&About form_view_print_preview...",          ID_APP_ABOUT
+        MENUITEM "&About form_view_print_preview...", ID_APP_ABOUT
     END
 END
-
-
-
 
 IDR_CONTEXT_MENU MENU
 BEGIN
@@ -212,7 +223,7 @@ BEGIN
         MENUITEM "&Workspace",                  ID_VIEW_WORKSPACE
         MENUITEM "&Workspace 2",                ID_VIEW_WORKSPACE2
         MENUITEM "&Output",                     ID_VIEW_OUTPUT
-        MENUITEM "&Toolbox"                     ID_VIEW_TOOLBOX
+        MENUITEM "&Toolbox",                    ID_VIEW_TOOLBOX
         MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR1
         MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR2
         MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR3
@@ -228,7 +239,7 @@ BEGIN
     END
 END
 
-IDR_POPUP_MDITABS MENU DISCARDABLE
+IDR_POPUP_MDITABS MENU
 BEGIN
     POPUP "DUMMY"
     BEGIN
@@ -242,7 +253,7 @@ BEGIN
     END
 END
 
-IDR_POPUP_DROP_MDITABS MENU DISCARDABLE
+IDR_POPUP_DROP_MDITABS MENU
 BEGIN
     POPUP "DUMMY"
     BEGIN
@@ -263,23 +274,21 @@ END
 
 IDR_MAINFRAME ACCELERATORS
 BEGIN
-    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL
-    "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL
-    "S",            ID_FILE_SAVE,           VIRTKEY,CONTROL
-    "P",            ID_FILE_PRINT,          VIRTKEY,CONTROL
-    "Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL
-    "X",            ID_EDIT_CUT,            VIRTKEY,CONTROL
-    "C",            ID_EDIT_COPY,           VIRTKEY,CONTROL
-    "V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL
-    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT
-    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT
-    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL
-    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT
-    VK_F6,          ID_NEXT_PANE,           VIRTKEY
-    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
 END
-
-
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -287,29 +296,45 @@ END
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOGEX   0, 0, 235, 55
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About form_view_print_preview"
-STYLE DS_MODALFRAME | DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
-FONT 8, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,7,7,21,20
-    LTEXT           "form_view_print_preview Version 1.0",IDC_STATIC,40,10,119,8,
-                    SS_NOPREFIX
+    LTEXT           "form_view_print_preview Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
     LTEXT           "Copyright (C) 2024",IDC_STATIC,40,25,119,8
     DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
     PUSHBUTTON      "http://www.<MyCompany>.com",IDC_COMPANY_URL,40,36,119,14
 END
 
-
 IDD_DIALOGBAR DIALOGEX 0, 0, 102, 129
 STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    LISTBOX         IDC_LIST_DLGBAR, 7, 21, 88, 73, LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
-    LTEXT           "Dialog bar", IDC_STATIC_DLGBAR, 7, 7, 44, 8
-    CONTROL         "CheckBox", IDC_CHECK_DLGBAR, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 7, 112, 49, 10
+    LISTBOX         IDC_LIST_DLGBAR,7,21,88,73,LBS_SORT | LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Dialog bar",IDC_STATIC_DLGBAR,7,7,44,8
+    CONTROL         "CheckBox",IDC_CHECK_DLGBAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,112,49,10
 END
 
+IDD_QPRNTSYMVIEW DIALOGEX 0, 0, 376, 274
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "ids_dlg_print_symbols_intro",IDC_STATIC,7,15,280,10
+    LTEXT           "Static",IDC_ECHO,189,35,180,8
+    CONTROL         "",IDC_SLIDER_DENSITY,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,189,73,100,26
+    LTEXT           "ids_dlg_symbols_density",IDC_STATIC,189,62,174,10
+    LTEXT           "3",IDC_STATIC,197,99,8,8
+    LTEXT           "4",IDC_STATIC,224,99,8,8
+    LTEXT           "5",IDC_STATIC,250,99,8,8
+    LTEXT           "6",IDC_STATIC,277,99,8,8
+    LTEXT           "Static",IDC_NUMBER_PAGES,189,125,180,8
+    PUSHBUTTON      "ids_dlg_preview",ID_FILE_PRINT_PREVIEW,190,166,142,18
+    PUSHBUTTON      "ids_dlg_print",ID_FILE_PRINT,190,197,142,18
+    PUSHBUTTON      "ids_dlg_close",IDC_BUTTON_CLOSE,190,225,142,18
+    CONTROL         "",IDC_TREE,"Static",SS_BLACKFRAME,6,26,162,136
+END
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -317,9 +342,9 @@ END
 // Version
 //
 
-VS_VERSION_INFO     VERSIONINFO
-  FILEVERSION       1,0,0,1
-  PRODUCTVERSION    1,0,0,1
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -336,19 +361,20 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "TODO: <Company name>"
             VALUE "FileDescription", "TODO: <File description>"
-            VALUE "FileVersion",     "1.0.0.1"
-            VALUE "InternalName",    "form_view_print_preview.exe"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "form_view_print_preview.exe"
             VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
-            VALUE "OriginalFilename","form_view_print_preview.exe"
+            VALUE "OriginalFilename", "form_view_print_preview.exe"
             VALUE "ProductName", "TODO: <Product name>"
-            VALUE "ProductVersion",  "1.0.0.1"
+            VALUE "ProductVersion", "1.0.0.1"
         END
     END
     BLOCK "VarFileInfo"
     BEGIN
-        VALUE "Translation", 0x0409, 1200
+        VALUE "Translation", 0x409, 1200
     END
 END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -368,6 +394,7 @@ BEGIN
 END
 #endif    // APSTUDIO_INVOKED
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
@@ -375,20 +402,24 @@ END
 
 STRINGTABLE
 BEGIN
-    IDP_OLE_INIT_FAILED   	"OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDS_MAIN_TOOLBAR        "Standard"
+    IDS_WINDOWS_MANAGER     "&Windows..."
 END
+
 STRINGTABLE
 BEGIN
-// Non-mac-targeting apps remove the two extra substrings
     IDR_MAINFRAME           "form_view_print_preview"
-  // has a file suffix - shell file type too
-    IDR_formviewprintpreviewTYPE         "\nformviewprintpreview\nform_view_print\n\n.sxe\nform_view_print_preview.Document\nform_view_print_preview.Document"
+    IDR_formviewprintpreviewTYPE 
+                            "\nformviewprintpreview\nform_view_print\n\n.sxe\nform_view_print_preview.Document\nform_view_print_preview.Document"
 END
+
 STRINGTABLE
 BEGIN
     AFX_IDS_APP_TITLE       "form_view_print_preview"
     AFX_IDS_IDLEMESSAGE     "Ready"
 END
+
 STRINGTABLE
 BEGIN
     ID_INDICATOR_EXT        "EXT"
@@ -398,6 +429,7 @@ BEGIN
     ID_INDICATOR_OVR        "OVR"
     ID_INDICATOR_REC        "REC"
 END
+
 STRINGTABLE
 BEGIN
     ID_FILE_NEW             "Create a new document\nNew"
@@ -407,11 +439,19 @@ BEGIN
     ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
     ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
     ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
-    ID_FILE_PRINT_DIRECT    "Send the document directly to the default printer without making changes\nQuick Print"
     ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Send the document directly to the default printer without making changes\nQuick Print"
     ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
     ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
     ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
     ID_FILE_MRU_FILE1       "Open this document"
     ID_FILE_MRU_FILE2       "Open this document"
     ID_FILE_MRU_FILE3       "Open this document"
@@ -428,11 +468,28 @@ BEGIN
     ID_FILE_MRU_FILE14      "Open this document"
     ID_FILE_MRU_FILE15      "Open this document"
     ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
     ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
     ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
     ID_WINDOW_MANAGER       "Manages the currently opened window\nWindow List"
+    ID_VIEW_PROPERTIES      "Show or hide the property grid\nToggle Property Grid"
+END
+
+STRINGTABLE
+BEGIN
     ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
     ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
     ID_EDIT_CLEAR           "Erase the selection\nErase"
     ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
     ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
@@ -444,6 +501,10 @@ BEGIN
     ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
     ID_EDIT_UNDO            "Undo the last action\nUndo"
     ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
     ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
     ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
 END
@@ -457,32 +518,29 @@ BEGIN
     AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
     AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
     AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
     AFX_IDS_SCRESTORE       "Restore the window to normal size"
     AFX_IDS_SCTASKLIST      "Activate Task List"
     AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
     AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
 END
 
-#endif
 STRINGTABLE
 BEGIN
-    ID_VIEW_CUSTOMIZE           "Customize toolbars and menus.\nCustomize"
+    ID_VIEW_CUSTOMIZE       "Customize toolbars and menus.\nCustomize"
 END
 
 STRINGTABLE
 BEGIN
-    IDS_MAIN_TOOLBAR            "Standard"
-END
-
-
-
-STRINGTABLE
-BEGIN
-    IDS_WINDOWS_MANAGER         "&Windows..."
-END
-
-STRINGTABLE
-BEGIN
+    ID_VIEW_WORKSPACE       "Show or hide the workspace bar\nToggle Workspace"
+    ID_VIEW_WORKSPACE2      "Show or hide the second workspace bar\nToggle Second Workspace"
     ID_VIEW_USER_TOOLBAR1   "Show or hide the user toolbar\nToggle User ToolBar"
     ID_VIEW_USER_TOOLBAR2   "Show or hide the user toolbar\nToggle User ToolBar"
     ID_VIEW_USER_TOOLBAR3   "Show or hide the user toolbar\nToggle User ToolBar"
@@ -490,20 +548,23 @@ BEGIN
     ID_VIEW_USER_TOOLBAR5   "Show or hide the user toolbar\nToggle User ToolBar"
     ID_VIEW_USER_TOOLBAR6   "Show or hide the user toolbar\nToggle User ToolBar"
     ID_VIEW_USER_TOOLBAR7   "Show or hide the user toolbar\nToggle User ToolBar"
+END
+
+STRINGTABLE
+BEGIN
     ID_VIEW_USER_TOOLBAR8   "Show or hide the user toolbar\nToggle User ToolBar"
     ID_VIEW_USER_TOOLBAR9   "Show or hide the user toolbar\nToggle User ToolBar"
     ID_VIEW_USER_TOOLBAR10  "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_OUTPUT          "Show or hide the output bar\nToggle Output"
 END
 
-
-STRINGTABLE DISCARDABLE
+STRINGTABLE
 BEGIN
-    ID_VIEW_WORKSPACE       "Show or hide the workspace bar\nToggle Workspace"
-    ID_VIEW_WORKSPACE2      "Show or hide the second workspace bar\nToggle Second Workspace"
-    ID_VIEW_OUTPUT          "Show or hide the output bar\nToggle Output"
-    ID_VIEW_PROPERTIES      "Show or hide the property grid\nToggle Property Grid"
     ID_TOOLBOX              "Show or hide the toolbox\nToggle Toolbox"
 END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -512,7 +573,6 @@ END
 //
 // Generated from the TEXTINCLUDE 3 resource.
 //
-
 #define _AFX_NO_OLE_RESOURCES
 #define _AFX_NO_TRACKER_RESOURCES
 #define _AFX_NO_PROPERTY_RESOURCES
@@ -520,8 +580,11 @@ END
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE 9, 1
 #pragma code_page(1252)
-#include "RES\\form_view_print_preview.rc2"  // non-Microsoft Visual C++ edited resources
-#include "afxres.rc"   // Standard components
-#include "afxprint.rc"  // printing/print preview resources
+#include "RES\form_view_print_preview.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"      // Standard components
+#include "afxprint.rc"    // printing/print preview resources
 #endif
+
+/////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
+

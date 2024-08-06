@@ -9,6 +9,12 @@
 #include "form_view_print_previewDoc.h"
 #include "form_view_print_previewView.h"
 
+
+#include "catalog/QPrntSymDoc.h"
+#include "catalog/QPrntSymView.h"
+
+
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -26,6 +32,9 @@ BEGIN_MESSAGE_MAP(Cform_view_print_previewApp, CBCGPWinApp)
 	ON_COMMAND(ID_FILE_OPEN, &CBCGPWinApp::OnFileOpen)
 	// Standard print setup command
 	ON_COMMAND(ID_FILE_PRINT_SETUP, &CBCGPWinApp::OnFilePrintSetup)
+
+	ON_COMMAND(ID_FILE_NEWCATALOG, &Cform_view_print_previewApp::OnFilePrintSymbols)
+
 END_MESSAGE_MAP()
 
 
@@ -114,14 +123,10 @@ BOOL Cform_view_print_previewApp::InitInstance()
 	// if not yet present
 	// Register the application's document templates.  Document templates
 	//  serve as the connection between documents, frame windows and views
-	CMultiDocTemplate* pDocTemplate;
-	pDocTemplate = new CMultiDocTemplate(IDR_formviewprintpreviewTYPE,
-		RUNTIME_CLASS(Cform_view_print_previewDoc),
-		RUNTIME_CLASS(CChildFrame), // custom MDI child frame
-		RUNTIME_CLASS(Cform_view_print_previewView));
-	if (!pDocTemplate)
-		return FALSE;
-	AddDocTemplate(pDocTemplate);
+
+	RegisterDocumentTemplates();
+
+
 
 	// create main MDI Frame window
 	CMainFrame * pMainFrame = new CMainFrame;
@@ -211,6 +216,43 @@ void Cform_view_print_previewApp::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
+}
+
+
+
+void Cform_view_print_previewApp::OnFilePrintSymbols()
+{
+	if (m_pDocTemplatePrntSym != nullptr)
+	{
+		m_pDocTemplatePrntSym->OpenDocumentFile(NULL);
+	}
+}
+
+
+BOOL Cform_view_print_previewApp::RegisterDocumentTemplates()
+{
+
+	m_pDocTemplateSxe = new CMultiDocTemplate(IDR_formviewprintpreviewTYPE,
+		RUNTIME_CLASS(Cform_view_print_previewDoc),
+		RUNTIME_CLASS(CChildFrame), // custom MDI child frame
+		RUNTIME_CLASS(Cform_view_print_previewView));
+	if (!m_pDocTemplateSxe)
+		return FALSE;
+	AddDocTemplate(m_pDocTemplateSxe);
+
+
+	m_pDocTemplatePrntSym = new CMultiDocTemplate(IDR_PRINT_SYMBOL_TYPE,
+		RUNTIME_CLASS(QPrntSymDoc),
+		RUNTIME_CLASS(CChildFrame),
+		RUNTIME_CLASS(QPrntSymView));
+	if (!m_pDocTemplatePrntSym)
+	{
+		return FALSE;
+	}
+
+	AddDocTemplate(m_pDocTemplatePrntSym);
+
+
 }
 
 

@@ -32,7 +32,18 @@ public:
 
 // Implementation
 	afx_msg void OnAppAbout();
+
+	afx_msg void OnFilePrintSymbols();
+
+
 	DECLARE_MESSAGE_MAP()
+private:
+	BOOL RegisterDocumentTemplates();
+
+	CMultiDocTemplate* m_pDocTemplateSxe;
+	CMultiDocTemplate* m_pDocTemplatePrntSym;
+
+
 };
 
 extern Cform_view_print_previewApp theApp;
